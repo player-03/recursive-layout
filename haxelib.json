@@ -1,0 +1,11 @@
+{
+	"name": "resursive-layout",
+	"url": "http://www.github.com/player-03/recursive-layout",
+	"license": "MIT",
+	"tags": [],
+	"description": "An extension to advanced-layout, to help manage layouts within layouts.",
+	"version": "0.0.1",
+	"releasenote": "",
+	"contributors": [ "player_03" ],
+	"dependencies": { "advanced-layout" }
+}
