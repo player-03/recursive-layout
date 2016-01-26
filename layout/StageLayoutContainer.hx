@@ -4,7 +4,7 @@ import flash.events.Event;
 import flash.Lib;
 import layout.area.Area;
 
-using layout.LayoutUtils;
+using layout.LayoutCreator;
 
 /**
  * A layout container that matches the size of the stage, and listens to the
