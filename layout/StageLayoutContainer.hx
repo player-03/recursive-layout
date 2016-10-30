@@ -11,8 +11,8 @@ using layout.LayoutCreator;
  * stage's resize events. Use this for top-level layouts.
  */
 class StageLayoutContainer extends LayoutContainer {
-	public function new() {
-		super(Lib.current.stage.stageWidth, Lib.current.stage.stageHeight);
+	public function new(?createImmediately:Bool = false) {
+		super(Lib.current.stage.stageWidth, Lib.current.stage.stageHeight, createImmediately);
 	}
 	
 	@:noCompletion private override function onAddedToStage(e:Event):Void {

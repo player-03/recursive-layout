@@ -19,7 +19,7 @@ class LayoutContainer extends Sprite {
 	
 	private var layoutCreated:Bool = false;
 	
-	public function new(?initialWidth:Float = 0, ?initialHeight:Float = 0, ?parentLayout:Layout) {
+	public function new(?initialWidth:Float = 0, ?initialHeight:Float = 0, ?parentLayout:Layout, ?createImmediately:Bool = false) {
 		super();
 		
 		pendingWidth = initialWidth;
@@ -39,6 +39,8 @@ class LayoutContainer extends Sprite {
 		
 		if(stage != null) {
 			dispatchEvent(new Event(Event.ADDED_TO_STAGE));
+		} else if(createImmediately) {
+			createLayoutNow();
 		}
 	}
 	
