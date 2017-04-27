@@ -7,5 +7,5 @@
 	"version": "0.0.1",
 	"releasenote": "",
 	"contributors": [ "player_03" ],
-	"dependencies": { "advanced-layout" }
+	"dependencies": { "advanced-layout":"" }
 }
