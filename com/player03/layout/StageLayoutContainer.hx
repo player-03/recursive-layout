@@ -1,10 +1,10 @@
-package layout;
+package com.player03.layout;
 
 import flash.events.Event;
 import flash.Lib;
-import layout.area.Area;
+import com.player03.layout.area.Area;
 
-using layout.LayoutCreator;
+using com.player03.layout.LayoutCreator;
 
 /**
  * A layout container that matches the size of the stage, and listens to the

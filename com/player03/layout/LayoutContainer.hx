@@ -1,14 +1,14 @@
-package layout;
+package com.player03.layout;
 
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.Lib;
-import layout.area.Area;
+import com.player03.layout.area.Area;
 import openfl.display.DisplayObject;
 
 #if !macro
-@:build(layout.LayoutContainerBuilder.build())
-@:autoBuild(layout.LayoutContainerBuilder.build())
+@:build(com.player03.layout.LayoutContainerBuilder.build())
+@:autoBuild(com.player03.layout.LayoutContainerBuilder.build())
 #end
 class LayoutContainer extends Sprite {
 	public var layout(default, null):Layout;
