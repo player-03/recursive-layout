@@ -19,19 +19,24 @@ class LayoutContainer extends Sprite {
 	
 	private var layoutCreated:Bool = false;
 	
-	public function new(?initialWidth:Float = 0, ?initialHeight:Float = 0, ?parentLayout:Layout, ?createImmediately:Bool = false) {
+	public function new(?initialWidth:Float = 0, ?initialHeight:Float = 0,
+			?parentLayout:Layout, ?createImmediately:Bool = false, ?customScale:Scale) {
 		super();
 		
 		pendingWidth = initialWidth;
 		pendingHeight = initialHeight;
 		this.parentLayout = parentLayout;
 		
-		var parentScale:Scale = Layout.currentLayout.scale;
-		if(parentLayout != null) {
-			parentScale = parentLayout.scale;
+		var scale:Scale;
+		if(customScale != null) {
+			scale = customScale;
+		} else if(parentLayout != null) {
+			scale = parentLayout.scale;
+		} else {
+			scale = Layout.currentLayout.scale;
 		}
 		
-		layout = new Layout(parentScale, new Area(0, 0, initialWidth, initialHeight));
+		layout = new Layout(scale, new Area(0, 0, initialWidth, initialHeight));
 		
 		addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 		addEventListener(Event.ADDED_TO_STAGE, onFirstAddedToStage, false, 1);
