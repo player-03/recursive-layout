@@ -140,6 +140,7 @@ class LayoutContainer extends Sprite {
 		return parentLayout = value;
 	}
 	
+	#if !display
 	#if flash @:keep @:getter(width) #else override #end
 	public function get_width():Float {
 		if(stage != null) {
@@ -181,4 +182,5 @@ class LayoutContainer extends Sprite {
 			return value;
 		#end
 	}
+	#end
 }

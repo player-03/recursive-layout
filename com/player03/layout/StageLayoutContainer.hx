@@ -31,6 +31,7 @@ class StageLayoutContainer extends LayoutContainer {
 		}
 	}
 	
+	#if !display
 	#if flash @:keep @:setter(width) #end
 	public override function set_width(value:Float) {
 		#if !flash
@@ -43,4 +44,5 @@ class StageLayoutContainer extends LayoutContainer {
 			return layout.bounds.height;
 		#end
 	}
+	#end
 }
