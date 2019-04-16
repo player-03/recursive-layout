@@ -4,8 +4,6 @@ import flash.events.Event;
 import flash.Lib;
 import com.player03.layout.area.Area;
 
-using com.player03.layout.LayoutCreator;
-
 /**
  * A layout container that matches the size of the stage, and listens to the
  * stage's resize events. Use this for top-level layouts.
